@@ -1,0 +1,9 @@
+Check the location 
+Step 1: echo 60 | sudo tee /sys/class/power_supply/BAT1/charge_control_end_threshold 
+
+Step 2: sudo gedit /etc/crontab
+
+Step 3:
+# Battery Charge Threshold by OS Busters
+@reboot root echo 60 > /sys/class/power_supply/BAT1/charge_control_end_threshold
+#
